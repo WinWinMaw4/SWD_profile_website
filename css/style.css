@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+}
+.navbar-toggler:focus{
+    outline: none;
+
+}
+.site-nav{
+    position: absolute;
+    top: 0;
+    z-index: 1001;
+   
+}   
+
+.site-nav-scroll{
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #00000015;
+    animation: toShow 0.5s linear;
+}
+@keyframes toShow{
+    from{
+       transform: translateY(-200px);
+    }
+    to{
+       transform: translateY(0px);
+       
+    }
+}
+.site-nav-scroll .nav-link{
+    color:#1a129f !important;
+    
+}
+.site-nav-scroll .menu-icon{
+    color: #1a129f;
+  
+}
+.site-logo{
+    width: 150px;
+}
+.home{
+    background-image: url(../img/bg-shape.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 55%;
+    position: relative;
+}
+.social-v{
+    position: absolute;
+    bottom: 25%;
+    left: 100px;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-v a{
+    margin-bottom: 20px;
+    text-decoration-line: none;
+}
+.scroll-to-next{
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 13%) !important;   
+}
+.about{
+    background-color: #7E76F910;
+   
+}
+.about-text{
+    background-image: url(../img/bg-2.svg );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100%;
+}
+.services{
+    background: url(../img/bg-3.svg) no-repeat center;
+}
+.services-card{
+    border-radius: 35px !important;
+    border: none !important;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%) !important;
+    transition: 0.5s;
+}
+.services-card:hover{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+    transform: scale(0.98);
+}
+.services-card-des{
+    height: 180px;
+    overflow-y: auto;
+}
+.pricing{
+    background: #7E76F915;
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slick-dots li{
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent;
+    border: 2px solid #7E76F9;
+    border-radius: 50%;
+}
+.slick-dots li.slick-active{
+    width: 15px !important;
+    height: 15px !important;
+    background-color: #7E76F9;
+    border: 2px solid #7E76F9;
+}
+.footer{
+    background-image:url(../img/footerbg-1.svg), url(../img/footerbg-2.svg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    padding: 200px 0px 30px 0;
+}
+.footer-content{
+
+}
+.ani-delay-1{
+    animation-delay: 0.5s;
+}
+.ani-delay-2{
+    animation-delay: 1s;
+}
+.ani-delay-3{
+    animation-delay: 1.5s;
+}
+.ani-delay-4{
+    animation-delay: 2s;
+}
+.ani-delay-5{
+    animation-delay: 2.5ss;
+}
+@media screen and (max-width:768px) {
+    .navbar-nav{
+        padding-top: 20px;
+    }
+    .site-nav{
+        background-color: #ffffffee;
+        box-shadow:0 0 5px #00000015;
+        backdrop-filter: blur(5px);
+    }
+    .site-nav .menu-icon{
+        color:#1a129f !important;
+    }
+    .site-nav .nav-link{
+        color: #1a129f !important;
+        padding: 15px 20px;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px #00000015;
+        border-radius: 10em;
+    }
+    .sercices{
+        margin-top: 20px !important;
+    }
+    .social-v{
+        bottom: 110px;
+        left: auto;
+        right: auto;
+
+        /* display: none; */
+    }
+    
+}
+@media screen and (max-width:576px) {
+    .navbar-nav{
+        padding-top: 20px;
+    }
+    .site-nav{
+        background-color: #ffffffee;
+        box-shadow:0 0 5px #00000015;
+        backdrop-filter: blur(5px);
+    }
+    .site-nav .menu-icon{
+        color:#1a129f !important;
+    }
+    .site-nav .nav-link{
+        color: #1a129f !important;
+        padding: 15px 20px;
+        background-color: #ffffff;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px #00000015;
+        border-radius: 10em;
+    }
+    .about{
+        margin-top: 20px;
+    }
+    .content-2,.content-2-text{
+        width: 100% !important;
+    }
+    .footer{
+        background-position: center;
+    }
+    .social-v{
+        bottom: 110px;
+        left: auto;
+        right: 32px;
+
+        /* display: none; */
+    }
+    .scroll-to-next{
+        bottom: 15px;
+        left: auto;
+        right: 7px;
+        margin: 10px;
+
+        /* display: none; */
+    }
+    
+}
