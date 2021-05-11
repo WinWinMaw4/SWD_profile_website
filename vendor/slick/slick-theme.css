@@ -145,11 +145,10 @@
   opacity: 1;
 }
 
-/* .slick-dots li button:before {
+.slick-dots li button:before {
   position: absolute;
   top: 0;
   left: 0;
-  content: "•";
   width: 20px;
   height: 20px;
   font-family: "slick";
@@ -165,5 +164,5 @@
 .slick-dots li.slick-active button:before {
   color: black;
   opacity: 0.75;
-} */
+}
 /*# sourceMappingURL=slick-theme.css.map */

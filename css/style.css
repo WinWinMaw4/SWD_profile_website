@@ -2,12 +2,19 @@
 
 *{
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
 body{
 }
+/* .navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    border: 1px solid;
+    border-radius: 100rem;
+    padding: 0.5rem 1.5rem;
+} */
 .navbar-toggler:focus{
     outline: none;
 
@@ -24,6 +31,7 @@ body{
     background-color: #ffffff;
     box-shadow: 0 0 5px #00000015;
     animation: toShow 0.5s linear;
+    /* margin-top: 20px; */
 }
 @keyframes toShow{
     from{
@@ -34,9 +42,24 @@ body{
        
     }
 }
+.nav-link{
+    padding: 0.5rem 1.3rem !important;
+}
+.nav-link.current-section{
+    border: 2px solid #ffffff;
+    border-radius: 10em !important;
+    padding: 0.5rem 1.3rem !important;
+}
+
 .site-nav-scroll .nav-link{
     color:#1a129f !important;
     
+}
+.site-nav-scroll .nav-link.current-section{
+    border: 2px solid #1a129f !important;
+    border-radius: 10em !important;
+    padding: 0.5rem 1.3rem !important;
+
 }
 .site-nav-scroll .menu-icon{
     color: #1a129f;
@@ -64,6 +87,16 @@ body{
 .social-v a{
     margin-bottom: 20px;
     text-decoration-line: none;
+    transition: 0.5s;
+}
+.social-v a:hover{
+    transform: scale(1.5);
+}
+.social-icon a{
+    transition: 0.5s;
+}
+.social-icon a:hover{
+    transform: scale(1.5);
 }
 .scroll-to-next{
     position: absolute;
@@ -102,6 +135,12 @@ body{
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
     transform: scale(0.98);
 }
+.services-card img{
+    transition: 0.5s;
+}
+.services-card:hover img{
+    transform: translateX(20px);
+}
 .services-card-des{
     height: 180px;
     overflow-y: auto;
@@ -127,11 +166,19 @@ body{
     background-color: #7E76F9;
     border: 2px solid #7E76F9;
 }
-.footer{
-    background-image:url(../img/footerbg-1.svg), url(../img/footerbg-2.svg);
-    background-size: cover ;
+.contact{
+    background-image: url(../img/footerbg-1.svg), url(../img/footerbg-2.svg);
+    background-size: auto 56%;
     background-repeat: no-repeat;
-    padding: 200px 0px 30px 0;
+    padding: 200px 0px 0px 0px;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+/* .contact-header{
+    box-shadow: 0 0.5rem 1rem #7e57c2c9 !important;
+} */
+footer{
+   
 }
 .footer-content{
 
@@ -152,6 +199,12 @@ body{
     animation-delay: 2.5ss;
 }
 @media screen and (max-width:768px) {
+    .nav-link.current-section{
+        border: 2px solid #1a129f !important;
+        border-radius: 10em !important;
+        padding: 0.5rem 1.3rem !important;
+    
+    }
     .navbar-nav{
         padding-top: 20px;
     }
@@ -159,6 +212,7 @@ body{
         background-color: #ffffffee;
         box-shadow:0 0 5px #00000015;
         backdrop-filter: blur(5px);
+        padding-top: 10px;
     }
     .site-nav .menu-icon{
         color:#1a129f !important;
@@ -175,15 +229,38 @@ body{
         margin-top: 20px !important;
     }
     .social-v{
-        bottom: 110px;
+        bottom: 280px;
         left: auto;
         right: auto;
 
         /* display: none; */
     }
+    .content-2{
+        width: 100% !important;
+    }
+    /* .content-2-text{
+        width: 100% !important;
+        
+    } */
+    /* .content-2-p{
+        height: 200px;
+        overflow: auto;
+        text-align: justify;
+    } */
+    .contact{
+        background-position: bottom;
+        background-size: auto 50%;
+    }
+   
     
 }
 @media screen and (max-width:576px) {
+    .nav-link.current-section{
+        border: 2px solid #1a129f !important;
+        border-radius: 10em !important;
+        padding: 0.5rem 1.3rem !important;
+    
+    }
     .navbar-nav{
         padding-top: 20px;
     }
@@ -191,6 +268,7 @@ body{
         background-color: #ffffffee;
         box-shadow:0 0 5px #00000015;
         backdrop-filter: blur(5px);
+        padding-top: 0px;
     }
     .site-nav .menu-icon{
         color:#1a129f !important;
@@ -203,14 +281,24 @@ body{
         box-shadow: 0 0 5px #00000015;
         border-radius: 10em;
     }
+    .home{
+        background-image:url(../img/bg-shape.svg), url(../img/bg-3.svg);
+        background-size: auto 45%;
+        background-blend-mode: difference;
+    }
     .about{
         margin-top: 20px;
     }
     .content-2,.content-2-text{
         width: 100% !important;
     }
-    .footer{
-        background-position: center;
+    .contact{
+        background-position: bottom;
+        background-size: cover;
+    }
+     .contact-header{
+        color: white;
+        font-weight: bolder;
     }
     .social-v{
         bottom: 110px;
